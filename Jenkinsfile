@@ -1,13 +1,11 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Checkout Code') {
-            steps {
-                checkout scm
-            }
-        }
+    environment {
+        PYTHON_EXE = "C:\\Users\\1831\\AppData\\Local\\Programs\\Python\\Python312\\python.exe"
+    }
 
+    stages {
         stage('Setup Python Environment') {
             steps {
                 script {
@@ -20,7 +18,7 @@ pipeline {
                         '''
                     } else {
                         bat '''
-                            py -3.12 -m venv venv
+                            "%PYTHON_EXE%" -m venv venv
                             call venv\\Scripts\\activate
                             python -m pip install --upgrade pip
                             pip install -r requirements.txt
