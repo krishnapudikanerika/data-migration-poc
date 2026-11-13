@@ -1,0 +1,4 @@
+customer_id,full_name,email,account_status,balance
+101,Rahul Sharma,rahul.sharma@example.com,ACTIVE,5000.50
+102,Priya Nair,priya.nair@example.com,ACTIVE,1200.00
+103,Amit Verma,amit.verma@example.com,INACTIVE,3400.75

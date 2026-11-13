@@ -1,0 +1,9 @@
+migrations:
+  - table_name: "customers"
+    description: "Validate customer master table migration"
+    source_type: "csv"
+    source_path: "data/source_customers.csv"
+    target_type: "csv"
+    target_path: "data/target_customers.csv"
+    join_columns: ["customer_id"]
+    abs_tol: 0.01
